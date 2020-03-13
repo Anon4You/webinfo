@@ -73,7 +73,7 @@ if [ $zz = 6 ]
 then
 clear
 toilet -f smmono12 --gay "GeoIp"
-echo $'\e33m'" "
+echo $'\e[33m'" "
 curl https://api.hackertarget.com/geoip/?q=$xx
 echo " "
 toilet -f smmono12 --gay "Done"
