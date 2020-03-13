@@ -1,1 +1,1 @@
-pkg install curl toilet -y && mv .wi /data/data/com.termux/files/usr/bin && mv .wi webinfo && cd && rm -rf webinfo && clear && toilet -f term -F border --gay "Tyep webinfo to run tool"
+pkg install curl toilet -y && mv .wi webinfo && chmod 777 * && mv webinfo /data/data/com.termux/files/usr/bin && cd && rm -rf webinfo && clear && toilet -f term -F border --gay "Tyep webinfo to run tool"
