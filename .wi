@@ -1,0 +1,150 @@
+#!/data/data/com.termux/files/usr/bash
+toilet -f slant --metal 'Webinfo'
+echo $'\e[33;1m'"Author :"$'\e[37;1m'" Bishal Singh"$'\e[31;1m'" ["$'\e[33;1m'"Anon"$'\e[32;1m'"4"$'\e[33;1m'"You"$'\e[31;1m'"]"
+echo $'\e[36m'"
+"
+read -p 'Target-»  ' xx
+echo " "
+echo $'\e[31m'"["$'\e[0;1m'"01"$'\e[31m'"]"$'\e[32;1m'" Whois"
+echo $'\e[31m'"["$'\e[0;1m'"02"$'\e[31m'"]"$'\e[32;1m'" Dnslookup"
+echo $'\e[31m'"["$'\e[0;1m'"03"$'\e[31m'"]"$'\e[32;1m'" Ping"
+echo $'\e[31m'"["$'\e[0;1m'"04"$'\e[31m'"]"$'\e[32;1m'" Traceroot"
+echo $'\e[31m'"["$'\e[0;1m'"05"$'\e[31m'"]"$'\e[32;1m'" Reversedns"
+echo $'\e[31m'"["$'\e[0;1m'"06"$'\e[31m'"]"$'\e[32;1m'" GeoIp"
+echo $'\e[31m'"["$'\e[0;1m'"07"$'\e[31m'"]"$'\e[32;1m'" Nmap"
+echo $'\e[31m'"["$'\e[0;1m'"08"$'\e[31m'"]"$'\e[32;1m'" Http"
+echo $'\e[31m'"["$'\e[0;1m'"09"$'\e[31m'"]"$'\e[32;1m'" Plink"
+echo $'\e[31m'"["$'\e[0;1m'"10"$'\e[31m'"]"$'\e[32;1m'" Reverseip"
+echo $'\e[31m'"["$'\e[0;1m'"99"$'\e[31m'"]"$'\e[32;1m'" Exit"
+echo " "
+echo $'\e[36;1m'"
+"
+read -p 'Webinfo-» ' zz
+
+if [ $zz = 1 ]
+then
+clear
+toilet -f smmono12 --gay 'Whois'
+sleep 2
+clear
+echo $'\e[33m'" "
+curl http://api.hackertarget.com/whois/?q=$xx
+echo " "
+toilet -f smmono12 --gay "Done"
+webinfo
+fi
+if [ $zz = 2 ]
+then
+clear
+toilet -f smmono12 --gay 'DNS'
+sleep 2
+clear
+echo $'\e[33m'" "
+curl https://api.hackertarget.com/dnslookup/?q=$xx
+echo " "
+toilet -f smmono12 --gay "Done"
+webinfo
+fi
+if [ $zz = 3 ]
+then
+clear
+toilet -f smmono12 --gay "Ping"
+sleep 2
+clear
+echo $'\e[33m'" "
+curl https://api.hackertarget.com/nping/?q=$xx
+echo " "
+toilet -f smmono12 --gay "Done"
+webinfo
+fi
+if [ $zz = 4 ]
+then
+clear
+toilet -f smmono12 --gay "Traceroot"
+sleep 2
+clear
+echo $'\e[33m'" "
+curl https://api.hackertarget.com/mtr/?q=$xx
+echo " "
+toilet -f smmono12 --gay "Done"
+webinfo
+fi
+if [ $zz = 5 ]
+then
+clear
+toilet -f smmono12 --gay "reversedns"
+sleep 2
+clear
+echo $'\e[33m'" "
+curl https://api.hackertarget.com/reversedns/?q=$xx
+echo " "
+toilet -f smmono12 --gay "Done"
+webinfo
+fi
+if [ $zz = 6 ]
+then
+clear
+toilet -f smmono12 --gay "GeoIp"
+sleep 2
+clear
+echo $'\e[33m'" "
+curl https://api.hackertarget.com/geoip/?q=$xx
+echo " "
+toilet -f smmono12 --gay "Done"
+webinfo
+fi
+if [ $zz = 7 ]
+then
+clear
+toilet -f smmono12 --gay "Nmap"
+sleep 2
+clear
+echo $'\e[33m'" "
+curl https://api.hackertarget.com/nmap/?q=$xx
+echo " "
+toilet -f smmono12 --gay "Done"
+webinfo
+fi
+if [ $zz = 8 ]
+then
+clear
+toilet -f smmono12 --gay "Http"
+sleep 2
+clear
+echo $'\e[33m'" "
+curl https://api.hackertarget.com/httpheaders/?q=$xx
+echo " "
+toilet -f smmono12 --gay "Done"
+webinfo
+fi
+if [ $zz = 9 ]
+then
+clear
+toilet -f smmono12 --gay "Pglink"
+sleep 2
+clear
+echo $'\e[33m'" "
+curl https://api.hackertarget.com/pagelinks/?q=$xx
+echo " "
+toilet -f smmono12 --gay "Done"
+webinfo
+fi
+if [ $zz = 10 ]
+then
+clear
+toilet -f smmono12 --gay "Reverseip"
+sleep 2
+clear
+echo $'\e[33m'" "
+curl https://api.hackertarget.com/reverseip/?q=$xx
+echo " "
+toilet -f smmono12 --gay "Done"
+webinfo
+fi
+if [ $zz = 99 ]
+then
+toilet -f term --gay 'Thanks for using this tool'
+sleep 3
+clear
+exit
+fi
