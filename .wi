@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bash
+#!/data/data/com.termux/files/usr/bin/bash
 toilet -f slant --metal 'Webinfo'
 echo $'\e[33;1m'"Author :"$'\e[37;1m'" Bishal Singh"$'\e[31;1m'" ["$'\e[33;1m'"Anon"$'\e[32;1m'"4"$'\e[33;1m'"You"$'\e[31;1m'"]"
 echo $'\e[36m'"
