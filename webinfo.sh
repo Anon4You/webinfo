@@ -101,7 +101,7 @@ fi
 if [ $zz = 10 ] ; then
 echo opening video link with xdg-open
 sleep 2
-xdg-open ""
+xdg-open "https://youtu.be/gAPufnS72tE"
 fi
 if [ $zz = 00 ] ; then
 str="exiting tool..."
