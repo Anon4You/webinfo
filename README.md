@@ -1,8 +1,9 @@
 [![License](https://img.shields.io/badge/Licenese-MIT-blue.svg?longCache=true&style=flat)](https://github.com/Anon4You/webinfo/blob/main/LICENSE)
 
 <img src="logo.jpg"/>
+
 # webinfo v1
->A website information gathering tool for termux
+> A website information gathering tool for termux
 ## Menu
 |whois <br>
 |dnslookup <br>
