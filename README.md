@@ -14,14 +14,12 @@
 |pagelinks
 
 ## Installation
+> Just copy and paste the bellow command in your Termux... 
 ```
-$ pkg up && pkg install wget -y
-$ wget https://raw.githubusercontent.com/Anon4You/webinfo/main/webinfo.sh
-$ chmod +x webinfo.sh
-$ ./webinfo.sh
+pkg up && pkg install wget -y && wget https://raw.githubusercontent.com/Anon4You/webinfo/main/webinfo.sh && chmod +x webinfo.sh && ./webinfo.sh
 ```
 ## Author
-* [Alienkrishn] (https://www.instagram.com/alienkrishn) - webinfo
+* [Alienkrishn](https://www.instagram.com/alienkrishn) - webinfo
 
 
 
