@@ -3,15 +3,15 @@
 # webinfo v1
 >A website information gathering tool for termux
 ## Menu
-|whois
-|dnslookup
-|host
-|traceroure
-|reversedns
-|geoip
-|nmap
-|httpheaders
-|pagelinks
+|whois <br>
+|dnslookup <br>
+|host <br>
+|traceroure <br>
+|reversedns <br>
+|geoip <br>
+|nmap <br>
+|httpheaders <br>
+|pagelinks <br>
 
 ## Installation
 > Just copy and paste the bellow command in your Termux... 
