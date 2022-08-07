@@ -1,5 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 clear
+command -v toilet > /dev/null 2>&1 || { echo >&2 "Installing toilet"; pkg install toilet -y 1; }
 command -v figlet > /dev/null 2>&1 || { echo >&2 "Installing figlet"; pkg install figlet -y 1; }
 command -v whois > /dev/null 2>&1 || { echo >&2 "Installing whois"; pkg install whois -y 1; }
 command -v curl > /dev/null 2>&1 || { echo >&2 "Installing curl"; pkg install curl -y 1; }
