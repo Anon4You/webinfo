@@ -39,6 +39,10 @@ echo whois $xx
 sleep 2
 clear
 whois $xx
+echo ""
+echo "Press enter to continue "
+read -e
+webinfo
 fi
 
 if [ $zz = 2 ] 
@@ -47,6 +51,10 @@ echo dnslookup $xx
 sleep 2
 clear
 curl https://api.hackertarget.com/dnslookup/?q=$xx
+echo ""
+echo "Press enter to continue "
+read -e
+webinfo
 fi
 
 if [ $zz = 3 ] ; then
@@ -54,6 +62,10 @@ echo host $xx
 sleep 2
 clear
 host $xx
+echo ""
+echo "Press enter to continue "
+read -e
+webinfo
 fi
 
 if [ $zz = 4 ] ; then
@@ -61,6 +73,10 @@ echo traceroute $xx
 sleep 2
 clear
 traceroute $xx
+echo ""
+echo "Press enter to continue "
+read -e
+webinfo
 fi
 
 if [ $zz = 6 ] ; then
@@ -68,6 +84,10 @@ echo geoip $xx
 sleep 2
 clear
 curl https://api.hackertarget.com/geoip/?q=$xx
+echo ""
+echo "Press enter to continue "
+read -e
+webinfo
 fi
 
 if [ $zz = 5 ] ; then
@@ -75,6 +95,10 @@ echo reversedns $xx
 sleep 2
 clear
 curl https://api.hackertarget.com/reversedns/?q=$xx
+echo ""
+echo "Press enter to continue "
+read -e
+webinfo
 fi
 
 if [ $zz = 7 ] ; then
@@ -82,6 +106,10 @@ echo nmap $xx
 sleep 2
 clear
 nmap $xx
+echo ""
+echo "Press enter to continue "
+read -e
+webinfo
 fi
 
 if [ $zz = 8 ] ; then
@@ -89,6 +117,10 @@ echo http $xx
 sleep 2
 clear
 curl https://api.hackertarget.com/httpheaders/?q=$xx
+echo ""
+echo "Press enter to continue "
+read -e
+webinfo
 fi
 
 if [ $zz = 9 ] ; then
@@ -96,6 +128,10 @@ echo pagelinks $xx
 sleep 2
 clear
 curl https://api.hackertarget.com/pagelinks/?q=$xx
+echo ""
+echo "Press enter to continue "
+read -e
+webinfo
 fi
 
 if [ $zz = 10 ] ; then
