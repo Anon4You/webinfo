@@ -1,12 +1,11 @@
 #!/data/data/com.termux/files/usr/bin/bash
 clear
-command -v toilet > /dev/null 2>&1 || { echo >&2 "Installing toilet"; pkg install toilet -y 1; }
-command -v figlet > /dev/null 2>&1 || { echo >&2 "Installing figlet"; pkg install figlet -y 1; }
-command -v whois > /dev/null 2>&1 || { echo >&2 "Installing whois"; pkg install whois -y 1; }
-command -v curl > /dev/null 2>&1 || { echo >&2 "Installing curl"; pkg install curl -y 1; }
-command -v traceroute > /dev/null 2>&1 || { echo >&2 "Installing traceroute"; pkg install traceroute -y 1; }
-command -v nmap > /dev/null 2>&1 || { echo >&2 "Installing nmap"; pkg install nmap -y 1; }
-command -v host > /dev/null 2>&1 || { echo >&2 "Installing dnsutils"; pkg install dnsutils -y 1; }
+command -v toilet > /dev/null 2>&1 || { echo >&2 $'\e[32;1m'"toilet not found !, Installing... toilet"; pkg install toilet -y 1; }
+command -v figlet > /dev/null 2>&1 || { echo >&2 $'\e[32;1m'"figlet not found!, Installing... figlet"; pkg install figlet -y 1; }
+command -v whois > /dev/null 2>&1 || { echo >&2 $'\e[32;1m'"whois not found!, Installing... whois"; pkg install whois -y 1; }
+command -v traceroute > /dev/null 2>&1 || { echo >&2 $'\e[32;1m"traceroute not found!, Installing.... traceroute"; pkg install traceroute -y 1; }
+command -v nmap > /dev/null 2>&1 || { echo >&2 $'\e[32;1m'"nmap not found!, Installing... nmap"; pkg install nmap -y 1; }
+command -v host > /dev/null 2>&1 || { echo >&2 $'\e[32;1m'"host not found!, Installing... dnsutils"; pkg install dnsutils -y 1; }
 clear
 echo $'\33[32;1m'""
 figlet -f smblock "                     Webinfo"
