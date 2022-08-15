@@ -124,6 +124,6 @@ echo "thanks for using this tool"
 exit
 fi
 if [ $zz = 99 ] ; then
-bash webinfo.sh
+webinfo
 fi
 
