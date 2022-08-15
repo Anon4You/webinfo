@@ -18,12 +18,12 @@
 ## Installation
 > Just copy and paste the bellow command in your Termux... 
 ```
-pkg up && pkg install wget -y && wget https://raw.githubusercontent.com/Anon4You/webinfo/main/webinfo.sh && chmod +x webinfo.sh
+pkg up && pkg install wget -y && wget https://raw.githubusercontent.com/Anon4You/webinfo/main/webinfo && mv webinfo $PREFIX/usr/bin && chmod +x $PREFIX/usr/bin/webinfo
 ```
 ## After installation type bellow command <br>
 To run the tool
 ```
-./webinfo
+webinfo
 ```
 ## Author
 * [Alienkrishn](https://www.instagram.com/alienkrishn) - webinfo
