@@ -27,7 +27,7 @@ echo $'\e[31m'"["$'\e[0;1m'"06"$'\e[31m'"]"$'\e[32;1m'" GeoIp"
 echo $'\e[31m'"["$'\e[0;1m'"07"$'\e[31m'"]"$'\e[32;1m'" Nmap"
 echo $'\e[31m'"["$'\e[0;1m'"08"$'\e[31m'"]"$'\e[32;1m'" Http"
 echo $'\e[31m'"["$'\e[0;1m'"09"$'\e[31m'"]"$'\e[32;1m'" Pagelinks"
-echo $'\e[31m'"["$'\e[0;1m'"10"$'\e[31m'"]"$'\e[32;1m'" Practical Video"
+echo $'\e[31m'"["$'\e[0;1m'"10"$'\e[31m'"]"$'\e[32;1m'" More tools"
 echo $'\e[31m'"["$'\e[0;1m'"00"$'\e[31m'"]"$'\e[32;1m'" Exit"
 echo $'\e[31m'"["$'\e[0;1m'"99"$'\e[31m'"]"$'\e[32;1m'" Back"
 echo " "
@@ -135,9 +135,9 @@ webinfo
 fi
 
 if [ $zz = 10 ] ; then
-echo opening video link with xdg-open
+echo opening more tools with xdg-open
 sleep 2
-xdg-open "https://youtu.be/gAPufnS72tE"
+xdg-open "https://github.com/Anon4You"
 fi
 if [ $zz = 00 ] ; then
 str="exiting tool..."
