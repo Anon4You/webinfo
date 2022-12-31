@@ -120,7 +120,7 @@ elif [ $zz = 10 ] ; then
 echo opening more tools with xdg-open
 sleep 2
 xdg-open "https://github.com/Anon4You"
-elif [ $zz = 00 ] && [ $zz = 0 ] ; then
+elif [ $zz = 00 ] ; then
 str="exiting tool..."
 
 for ((i = 0; i < ${#str}; i++)); do
