@@ -2,7 +2,7 @@
 [![YouTube](https://img.shields.io/badge/You-Tube-yellow)](https://youtube.com/channel/UCeYmxYjmQfvLvFl-kbunGug) 
 <img src="logo.jpg"/>
 
-# webinfo v1
+# webinfo v2.0
 > A website information gathering tool for termux
 ## Menu
 * whois <br>
