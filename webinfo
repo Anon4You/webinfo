@@ -43,9 +43,7 @@ echo ""
 echo "Press enter to continue "
 read -e
 webinfo
-fi
-
-if [ $zz = 2 ] 
+elif [ $zz = 2 ] 
 then
 echo dnslookup $xx
 sleep 2
@@ -55,9 +53,7 @@ echo ""
 echo "Press enter to continue "
 read -e
 webinfo
-fi
-
-if [ $zz = 3 ] ; then
+elif [ $zz = 3 ] ; then
 echo host $xx
 sleep 2
 clear
@@ -66,9 +62,7 @@ echo ""
 echo "Press enter to continue "
 read -e
 webinfo
-fi
-
-if [ $zz = 4 ] ; then
+elif [ $zz = 4 ] ; then
 echo traceroute $xx
 sleep 2
 clear
@@ -77,9 +71,7 @@ echo ""
 echo "Press enter to continue "
 read -e
 webinfo
-fi
-
-if [ $zz = 6 ] ; then
+elif [ $zz = 6 ] ; then
 echo geoip $xx
 sleep 2
 clear
@@ -88,9 +80,7 @@ echo ""
 echo "Press enter to continue "
 read -e
 webinfo
-fi
-
-if [ $zz = 5 ] ; then
+elif [ $zz = 5 ] ; then
 echo reversedns $xx
 sleep 2
 clear
@@ -99,9 +89,7 @@ echo ""
 echo "Press enter to continue "
 read -e
 webinfo
-fi
-
-if [ $zz = 7 ] ; then
+elif [ $zz = 7 ] ; then
 echo nmap $xx
 sleep 2
 clear
@@ -110,9 +98,7 @@ echo ""
 echo "Press enter to continue "
 read -e
 webinfo
-fi
-
-if [ $zz = 8 ] ; then
+elif [ $zz = 8 ] ; then
 echo http $xx
 sleep 2
 clear
@@ -121,9 +107,7 @@ echo ""
 echo "Press enter to continue "
 read -e
 webinfo
-fi
-
-if [ $zz = 9 ] ; then
+elif [ $zz = 9 ] ; then
 echo pagelinks $xx
 sleep 2
 clear
@@ -132,14 +116,11 @@ echo ""
 echo "Press enter to continue "
 read -e
 webinfo
-fi
-
-if [ $zz = 10 ] ; then
+elif [ $zz = 10 ] ; then
 echo opening more tools with xdg-open
 sleep 2
 xdg-open "https://github.com/Anon4You"
-fi
-if [ $zz = 00 ] ; then
+elif [ $zz = 00 ] && [ $zz = 0 ] ; then
 str="exiting tool..."
 
 for ((i = 0; i < ${#str}; i++)); do
@@ -148,18 +129,7 @@ for ((i = 0; i < ${#str}; i++)); do
 done
 echo "thanks for using this tool"
 exit
-fi
-
-if [ $zz = 0 ] ; then
-str="exiting tool..."
-for ((i = 0; i < ${#str}; i++)); do
-        echo -n "${str:$i:1}"
-        sleep 000.1
-done
-echo "thanks for using this tool"
-exit
-fi
-if [ $zz = 99 ] ; then
+else 
 webinfo
 fi
 
