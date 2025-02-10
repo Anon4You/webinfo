@@ -107,12 +107,12 @@ main(){
 Whois(){
   exitorback
   read -p "Choose or Enter Domain : " target
-  clear
   if [[ ${target} == b ]]; then
     main
   elif [[ ${target} == q ]]; then
     terminate
   else
+    clear
     whois ${target}
     Whois
   fi
@@ -121,12 +121,12 @@ Whois(){
 Dns(){
   exitorback
   read -p "Choose or Enter Domain : " target
-  clear
   if [[ ${target} == b ]]; then
     main
   elif [[ ${target} == q ]]; then
     terminate
   else
+    clear
     curl https://api.hackertarget.com/dnslookup/?q=${target}
     Dns
   fi
@@ -135,12 +135,12 @@ Dns(){
 Host(){
   exitorback
   read -p "Choose or Enter Domain : " target
-  clear
   if [[ ${target} == b ]]; then
     main
   elif [[ ${target} == q ]]; then
     terminate
   else
+    clear
     host ${target}
     Host
   fi
@@ -149,12 +149,12 @@ Host(){
 Traceroute(){
   exitorback
   read -p "Choose or Enter Domain : " target
-  clear
   if [[ ${target} == b ]]; then
     main
   elif [[ ${target} == q ]]; then
     terminate
   else
+    clear
     traceroute ${target}
     Traceroute
   fi
@@ -163,12 +163,12 @@ Traceroute(){
 Reverse(){
   exitorback
   read -p "Choose or Enter Domain : " target
-  clear
   if [[ ${target} == b ]]; then
     main
   elif [[ ${target} == q ]]; then
     terminate
   else
+    clear
     curl https://api.hackertarget.com/reversedns/?q=${target}
     Reverse
   fi
@@ -177,12 +177,12 @@ Reverse(){
 Geoip(){
   exitorback
   read -p "Choose or Enter Domain : " target
-  clear
   if [[ ${target} == b ]]; then
     main
   elif [[ ${target} == q ]]; then
     terminate
   else
+    clear
     curl https://api.hackertarget.com/geoip/?q=${target}
     Geoip
   fi
@@ -191,12 +191,12 @@ Geoip(){
 HttpHeaders(){
   exitorback
   read -p "Choose or Enter Domain : " target
-  clear
   if [[ ${target} == b ]]; then
     main
   elif [[ ${target} == q ]]; then
     terminate
   else
+    clear
     curl https://api.hackertarget.com/httpheaders/?q=${target}
     HttpHeaders
   fi
@@ -205,12 +205,12 @@ HttpHeaders(){
 Nmap(){
   exitorback
   read -p "Choose or Enter Domain : " target
-  clear
   if [[ ${target} == b ]]; then
     main
   elif [[ ${target} == q ]]; then
     terminate
   else
+    clear
     nmap ${target}
     Nmap
   fi
@@ -219,12 +219,12 @@ Nmap(){
 Pagelink(){
   exitorback
   read -p "Choose or Enter Domain : " target
-  clear
   if [[ ${target} == b ]]; then
     main
   elif [[ ${target} == q ]]; then
     terminate
   else
+    clear
     curl https://api.hackertarget.com/pagelinks/?q=${target}
     Pagelink
   fi
@@ -233,12 +233,12 @@ Pagelink(){
 HttpStatus(){
   exitorback
   read -p "Choose or Enter Domain : " target
-  clear
   if [[ ${target} == b ]]; then
     main
   elif [[ ${target} == q ]]; then
     terminate
   else
+    clear
     http_code=$(curl -o /dev/null -s -w "%{http_code}\n" ${target})
     printf "HTTP Status Code for ${target}: ${http_code}\n"
     HttpStatus
@@ -248,12 +248,12 @@ HttpStatus(){
 SslInfo(){
   exitorback
   read -p "Choose or Enter Domain : " target
-  clear
   if [[ ${target} == b ]]; then
     main
   elif [[ ${target} == q ]]; then
     terminate
   else
+    clear
     echo | openssl s_client -servername ${target} -connect ${target}:443 2>/dev/null | openssl x509 -text
     SslInfo
   fi
@@ -262,12 +262,12 @@ SslInfo(){
 Subdomains(){
   exitorback
   read -p "Choose or Enter Domain : " target
-  clear
   if [[ ${target} == b ]]; then
     main
   elif [[ ${target} == q ]]; then
     terminate
   else
+    clear
     curl https://api.hackertarget.com/hostsearch/?q=${target}
     Subdomains
   fi
@@ -282,6 +282,7 @@ DnsRecord(){
     terminate
   else
     read -p "Enter DNS Record Type (A, MX, TXT, etc.): " record_type
+    clear
     dig ${target} ${record_type}
     DnsRecord
   fi
@@ -297,7 +298,7 @@ exitorback(){
 }
 
 terminate(){
-  printf "${red}Thanks for using this tool..${reset}"
+  printf "${boldw}${red}Thanks for using this tool...${reset}"
   sleep 1; exit 0
 }
 
