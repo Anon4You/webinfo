@@ -64,6 +64,11 @@ Just running the script:
 
 will execute all the built-in checks and display the collected information.
 
+<p align="left">
+  <a href="https://shell.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/Anon4You/webinfo.git&tutorial=README.md" target="_blank"><img src="https://gstatic.com/cloudssh/images/open-btn.svg"></a>
+</p>
+
+
 ## License 📜
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
