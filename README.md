@@ -2,6 +2,16 @@
 
 WebInfo is a convenient shell script designed to gather and display various types of information about websites and domains without requiring any command-line arguments. It offers a collection of useful features for web developers, system administrators, and security professionals.
 
+## Screenshot 📸
+
+<details>
+<summary>Click to view the screenshot</summary>
+
+![WebInfo Screenshot](screenshot/screenshot.jpg)
+
+</details>
+
+
 ## Features ✨
 
 - **🔍 WHOIS**: Retrieve registration details for a specified domain.
