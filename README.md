@@ -1,7 +1,6 @@
 # 🌐 WebInfo
 
 WebInfo is a convenient shell script designed to gather and display various types of information about websites and domains without requiring any command-line arguments. It offers a collection of useful features for web developers, system administrators, and security professionals.
-
 ## Screenshot 📸
 
 <details>
@@ -10,7 +9,6 @@ WebInfo is a convenient shell script designed to gather and display various type
 ![WebInfo Screenshot](screenshot/screenshot.jpg)
 
 </details>
-
 
 ## Features ✨
 
@@ -72,6 +70,9 @@ will execute all the built-in checks and display the collected information.
 ## License 📜
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Author 
+[Alienkrishn](https://github.com/Anon4You)
 
 ## Acknowledgments 🙏
 
