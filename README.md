@@ -1,34 +1,63 @@
-[![License](https://img.shields.io/badge/Licenese-MIT-blue.svg?longCache=true&style=flat)](https://github.com/Anon4You/webinfo/blob/main/LICENSE) [![Facebook](https://img.shields.io/badge/Facebook-Id-green)](https://www.facebook.com/alienkrishn) [![About](https://img.shields.io/badge/About-Me-red)](https://Anon4You.github.io/Alienkrishn) 
-[![YouTube](https://img.shields.io/badge/You-Tube-yellow)](https://youtube.com/channel/UCeYmxYjmQfvLvFl-kbunGug) 
-<img src="logo.jpg"/>
+# 🌐 WebInfo
 
-# webinfo v2.0
-> A website information gathering tool for termux
-## Menu
-* whois <br>
-* dnslookup <br>
-* host <br>
-* traceroure <br>
-* reversedns <br>
-* geoip <br>
-* nmap <br>
-* httpheaders <br>
-* pagelinks <br>
+WebInfo is a convenient shell script designed to gather and display various types of information about websites and domains without requiring any command-line arguments. It offers a collection of useful features for web developers, system administrators, and security professionals.
 
-## Installation
-> Just copy and paste the bellow command in your Termux... 
+## Features ✨
+
+- **🔍 WHOIS**: Retrieve registration details for a specified domain.
+- **🌐 DNS Lookup**: Perform DNS queries to get the domain's DNS records.
+- **🖥️ Host**: Obtain information about the specified host.
+- **📡 Traceroute**: Analyze the route packets take to reach the target domain.
+- **🔄 Reverse DNS**: Find the domain name associated with an IP address.
+- **🌍 GeoIP**: Get geographical information about an IP address.
+- **🛠️ Nmap**: Perform network exploration and security auditing.
+- **📜 HTTP Headers**: Fetch and display HTTP header information for a website.
+- **🔗 Page Links**: Extract and display all links from a webpage.
+
+## Installation 📥
+
+To use WebInfo, clone the repository:
+
+```bash
+git clone https://github.com/Anon4You/webinfo.git
 ```
-pkg install wget -y && wget https://raw.githubusercontent.com/Anon4You/webinfo/main/webinfo && mv webinfo $PREFIX/bin && chmod +x $PREFIX/bin/webinfo
+
+After cloning, navigate into the directory:
+
+```bash
+cd webinfo
 ```
-## After installation type bellow command <br>
-To run the tool
+
+Then, give the script execute permissions:
+
+```bash
+chmod +x webinfo.sh
 ```
-webinfo
+
+## Usage 🚀
+
+To run the script, simply execute it in your terminal:
+
+```bash
+./webinfo.sh
 ```
-## Author
-* [Alienkrishn](https://www.instagram.com/alienkrishn) - webinfo
 
+The script will automatically gather information for your default settings or predefined target, and display the results.
 
+## Example 💡
 
+Just running the script:
 
+```bash
+./webinfo.sh
+```
 
+will execute all the built-in checks and display the collected information.
+
+## License 📜
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments 🙏
+
+Special thanks to [Hackertarget.com](https://hackertarget.com) for providing the API used in this tool to perform various scans and gather essential information. If you have any questions or suggestions about WebInfo, feel free to reach out!
