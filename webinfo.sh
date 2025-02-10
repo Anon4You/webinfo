@@ -268,7 +268,7 @@ Subdomains(){
   elif [[ ${target} == q ]]; then
     terminate
   else
-    curl https://api.hackertarget.com/subdomaintoip/?q=${target}
+    curl https://api.hackertarget.com/hostsearch/?q=${target}
     Subdomains
   fi
 }
