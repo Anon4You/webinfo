@@ -292,7 +292,7 @@ DnsRecord(){
 exitorback(){
   printf "\n
   ${boldw}[b]${cyan} Back ${boldw}[q]${cyan} Exit ${reset}
-  ${boldw}${green}EXAMPLE :- example.com ${reset}
+  ${boldw}${red}Example ${blue}:-${green} example.com ${white}or${green} www.example.com${reset}
   "
 }
 
