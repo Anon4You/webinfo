@@ -8,8 +8,8 @@ WebInfo is a convenient shell script designed to gather and display various type
 - **🌐 DNS Lookup**: Perform DNS queries to get the domain's DNS records.
 - **🖥️ Host**: Obtain information about the specified host.
 - **📡 Traceroute**: Analyze the route packets take to reach the target domain.
-- **🔄 Reverse DNS**: Find the domain name associated with an IP address.
-- **🌍 GeoIP**: Get geographical information about an IP address.
+- **🔄 Reverse DNS**: Find the domain name associated with the domain IP address.
+- **🌍 GeoIP**: Get geographical information about the domain IP address.
 - **🛠️ Nmap**: Perform network exploration and security auditing.
 - **📜 HTTP Headers**: Fetch and display HTTP header information for a website.
 - **🔗 Page Links**: Extract and display all links from a webpage.
