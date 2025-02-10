@@ -18,12 +18,14 @@ command -v whois > /dev/null 2>&1 || { echo >&2 "whois not found!, Installing...
 command -v traceroute > /dev/null 2>&1 || { echo >&2 "traceroute not found!, Installing.... traceroute"; apt install traceroute -y 1; }
 command -v nmap > /dev/null 2>&1 || { echo >&2 "nmap not found!, Installing... nmap"; apt install nmap -y 1; }
 command -v host > /dev/null 2>&1 || { echo >&2 "host not found!, Installing... dnsutils"; apt install dnsutils -y 1; }
-command -v curl > /dev/null 2>&1 || { echo >&2 "curl not found!, Installing... dnsutils"; apt install curl -y 1; }
+command -v curl > /dev/null 2>&1 || { echo >&2 "curl not found!, Installing... curl"; apt install curl -y 1; }
+command -v openssl > /dev/null 2>&1 || { echo >&2 "openssl not found!, Installing... openssl-tools"; apt install openssl-tool -y 1; }
 
 # user interupt 
 
 usr_intrp(){
   printf "\e[0m\e[1;36m\n\vCTRL+C Pressed!, Exiting...\n"
+  sleep 1
   terminate
 }
 trap usr_intrp SIGINT
@@ -57,33 +59,43 @@ ${yellow}\t\t\t\t\tVersion 3.0${reset}
 main(){
   banner
   printf "
-  ${boldw}[1]${yellow} Whois lookup  ${boldw} [6]${yellow} Geoip lookup
-  ${boldw}[2]${yellow} Dns lookup    ${boldw} [7]${yellow} Nmap scan
-  ${boldw}[3]${yellow} Host lookup   ${boldw} [8]${yellow} Http Headers
-  ${boldw}[4]${yellow} Traceroute    ${boldw} [9]${yellow} Page Link
-  ${boldw}[5]${yellow} ReverseDns 
+  ${boldw}[01]${yellow} Whois lookup  ${boldw} [08]${yellow} Geoip lookup
+  ${boldw}[02]${yellow} Dns lookup    ${boldw} [09]${yellow} Nmap scan
+  ${boldw}[03]${yellow} Host lookup   ${boldw} [10]${yellow} Http Headers
+  ${boldw}[04]${yellow} Traceroute    ${boldw} [11]${yellow} Page Link
+  ${boldw}[05]${yellow} ReverseDns    ${boldw} [12]${yellow} Http Status
+  ${boldw}[06]${yellow} SSL Info      ${boldw} [13]${yellow} Subdomains
+  ${boldw}[07]${yellow} DNS Record  
 
-  ${boldw}[q]${cyan} Exit ${reset}
-  "
+  ${boldw}[q]${cyan} To Exit ${reset}
+"
   read -p "Choose An Option : " opt 
-  if [[ ${opt} == 1 ]]; then
+  if [[ ${opt} == 1 || ${opt} == 01 ]]; then
     Whois 
-  elif [[ ${opt} == 2 ]]; then
+  elif [[ ${opt} == 2 || ${opt} == 02 ]]; then
     Dns
-  elif [[ ${opt} == 3 ]]; then
+  elif [[ ${opt} == 3 || ${opt} == 03 ]]; then
     Host
-  elif [[ ${opt} == 4 ]]; then
+  elif [[ ${opt} == 4 || ${opt} == 04 ]]; then
     Traceroute
-  elif [[ ${opt} == 5 ]]; then
+  elif [[ ${opt} == 5 || ${opt} == 05 ]]; then
     Reverse
-  elif [[ ${opt} == 6 ]]; then
+  elif [[ ${opt} == 6 || ${opt} == 06 ]]; then
+    SslInfo
+  elif [[ ${opt} == 7 || ${opt} == 07 ]]; then
+    DnsRecord
+  elif [[ ${opt} == 8 || ${opt} == 08 ]]; then
     Geoip
-  elif [[ ${opt} == 7 ]]; then
+  elif [[ ${opt} == 9 || ${opt} == 09 ]]; then
     Nmap
-  elif [[ ${opt} == 8 ]]; then
+  elif [[ ${opt} == 10 ]]; then
     HttpHeaders
-  elif [[ ${opt} == 9 ]]; then
+  elif [[ ${opt} == 11 ]]; then
     Pagelink
+  elif [[ ${opt} == 12 ]]; then
+    HttpStatus
+  elif [[ ${opt} == 13 ]]; then
+    Subdomains
   elif [[ ${opt} == q ]]; then
     terminate
   else
@@ -218,6 +230,65 @@ Pagelink(){
   fi
 }
 
+HttpStatus(){
+  exitorback
+  read -p "Choose or Enter Domain : " target
+  clear
+  if [[ ${target} == b ]]; then
+    main
+  elif [[ ${target} == q ]]; then
+    terminate
+  else
+    http_code=$(curl -o /dev/null -s -w "%{http_code}\n" ${target})
+    printf "HTTP Status Code for ${target}: ${http_code}\n"
+    HttpStatus
+  fi
+}
+
+SslInfo(){
+  exitorback
+  read -p "Choose or Enter Domain : " target
+  clear
+  if [[ ${target} == b ]]; then
+    main
+  elif [[ ${target} == q ]]; then
+    terminate
+  else
+    echo | openssl s_client -servername ${target} -connect ${target}:443 2>/dev/null | openssl x509 -text
+    SslInfo
+  fi
+}
+
+Subdomains(){
+  exitorback
+  read -p "Choose or Enter Domain : " target
+  clear
+  if [[ ${target} == b ]]; then
+    main
+  elif [[ ${target} == q ]]; then
+    terminate
+  else
+    curl https://api.hackertarget.com/subdomaintoip/?q=${target}
+    Subdomains
+  fi
+}
+
+DnsRecord(){
+  exitorback
+  read -p "Choose or Enter Domain : " target
+  if [[ ${target} == b ]]; then
+    main
+  elif [[ ${target} == q ]]; then
+    terminate
+  else
+    read -p "Enter DNS Record Type (A, MX, TXT, etc.): " record_type
+    dig ${target} ${record_type}
+    DnsRecord
+  fi
+}
+
+
+ 
 exitorback(){
   printf "\n
   ${boldw}[b]${cyan} Back ${boldw}[q]${cyan} Exit ${reset}
