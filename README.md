@@ -6,7 +6,9 @@ WebInfo is a convenient shell script designed to gather and display various type
 <details>
 <summary>Click to view the screenshot</summary>
 
-![WebInfo Screenshot](https://github.com/Anon4You/webinfo/blob/main/screenshot/screenshot.jpg)
+<p align="center">
+  <img src="screenshot/screenshot.jpg">
+</p>
 
 </details>
 
